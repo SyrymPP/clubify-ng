@@ -1,0 +1,40 @@
+.ci {
+    height: 200px;
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.ci_img {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+img {
+    max-width: 100%;
+    transition: 0.2s;
+}
+img:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+.ci_name {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.733);
+    margin: 10px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.ci_desc {
+    z-index: 2;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.733);
+    margin: 0 10px 10px 10px;
+    padding: 0 10px;
+    position: absolute;
+    backdrop-filter: blur(30px);
+    font-size: 14px;
+}

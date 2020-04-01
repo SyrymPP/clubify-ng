@@ -1,0 +1,43 @@
+<div class="login">
+    <div *ngIf="login == true">
+        <div class="login_card">
+            <div class="title">Вход</div>
+            <form>
+                <div class="form_item">
+                    <div class="label">E-mail</div>
+                    <input type="text" placeholder="abc@example.com">
+                </div>
+                <div class="form_item">
+                    <div class="label">Пароль</div>
+                    <input type="password">
+                </div>
+                <div class="submit">Войти</div>
+            </form>
+            <div class="change">Нет аккаута?<div (click)="login = false">Можно создать!</div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="login == false">
+        <div class="login_card">
+            <div class="title">Регистрация</div>
+            <form>
+                <div class="form_item">
+                    <div class="label">E-mail</div>
+                    <input type="text" placeholder="abc@example.com">
+                </div>
+                <div class="form_item">
+                    <div class="label">Пароль</div>
+                    <input type="password">
+                </div>
+                <div class="form_item">
+                    <div class="label">Подтвердить пароль</div>
+                    <input type="password">
+                </div>
+                <div class="submit">Создать</div>
+            </form>
+            <div class="change">Уже есть аккаунт?<div (click)="login = true">Можно войти!</div>
+            </div>
+        </div>
+    </div>
+</div>

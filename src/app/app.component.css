@@ -1,0 +1,36 @@
+.header {
+    height: 70px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: grid;
+    padding: 0 10rem;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 3rem;
+}
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    display: grid;
+    transition: 0.2s;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+.logo:hover{
+    color: rgb(0, 117, 111);
+    transition: 0.2s;
+}
+.login {
+    color: rgb(0, 117, 111);
+    padding: 10px 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.login:hover {
+    background: rgb(200, 224, 224);
+    transition: 0.2s;
+}
+.category {
+    padding: 1rem 3rem;
+}
