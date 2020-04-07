@@ -60,3 +60,26 @@ form {
 .submit:active {
     background: rgb(0, 90, 86);
 }
+@media (max-width: 1250px) {
+    .cd {
+        grid-template-columns: auto 1fr;
+        padding: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .cd {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .cd_image {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .form {
+        justify-content: center;
+        display: grid;
+    }
+}

@@ -31,6 +31,9 @@
     background: rgb(200, 224, 224);
     transition: 0.2s;
 }
-.category {
-    padding: 1rem 3rem;
+@media (max-width: 1200px) {
+    .header {
+        height: 50px;
+        padding: 0 1rem;
+    }
 }

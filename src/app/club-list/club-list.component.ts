@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClubService } from '../club.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-club-list',
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ClubListComponent implements OnInit {
   public clubList = []
-  constructor(private clubService: ClubService, private route: ActivatedRoute) { }
+  constructor(private clubService: ClubService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {

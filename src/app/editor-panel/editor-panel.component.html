@@ -1,0 +1,37 @@
+<div class="editor">
+    <div class="title">Add new Club</div>
+    <form>
+        <div class="field">
+            <div class="field_label">Club name</div>
+            <input type="text">
+        </div>
+        <div class="field">
+            <div class="field_label">Image</div>
+            <input type="file">
+        </div>
+        <div class="field">
+            <div class="field_label">Category</div>
+            <input type="text">
+        </div>
+        <div class="field">
+            <div class="field_label">Desc</div>
+            <input type="text">
+        </div>
+        <div class="field">
+            <div class="field_label">Text</div>
+            <textarea cols="30" rows="10"></textarea>
+        </div>
+        <button>Add club</button>
+    </form>
+    <hr />
+    <div class="title">Editor's List</div>
+    <div class="editor_list">
+        <div *ngFor="let c of clubs">
+            <div class="editor_list__item">
+                {{ c.name }}
+                <button><i class="material-icons">delete</i></button>
+                <button><i class="material-icons">create</i></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClubListComponent } from './club-list/club-list.component';
 import { ClubItemComponent } from './club-item/club-item.component';
 import { ClubDetailComponent } from './club-detail/club-detail.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { EditorPanelComponent } from './editor-panel/editor-panel.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LoginComponent } from './login/login.component'
     ClubListComponent,
     ClubItemComponent,
     ClubDetailComponent,
-    LoginComponent
+    LoginComponent,
+    EditorPanelComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

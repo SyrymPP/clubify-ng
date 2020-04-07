@@ -18,3 +18,18 @@
 .active {
     color: #000;
 }
+@media (max-width: 1250px) {
+    .category {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto 1fr;
+        grid-gap: 1rem;
+        justify-content: start;
+    }
+}
+@media (max-width: 500px) {
+    .category {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 0 1rem;
+    }
+}
