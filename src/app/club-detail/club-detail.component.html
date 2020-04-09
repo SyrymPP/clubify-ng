@@ -10,13 +10,13 @@
         <form>
             <div class="form_item">
                 <div class="label">Имя</div>
-                <input type="text">
+                <input type="text" name="name" [(ngModel)]="userInfo.name">
             </div>
             <div class="form_item">
                 <div class="label">Номер телефона</div>
-                <input type="text" placeholder="+7 700 700 70 70">
+                <input type="text" placeholder="+7 700 700 70 70" name="phone" [(ngModel)]="userInfo.phone">
             </div>
-            <div class="submit">Оставить заявку</div>
+            <div class="submit" (click)="onSend()">Оставить заявку</div>
         </form>
     </div>
 </div>

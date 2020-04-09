@@ -5,13 +5,13 @@
             <form>
                 <div class="form_item">
                     <div class="label">E-mail</div>
-                    <input type="text" placeholder="abc@example.com">
+                    <input type="text" placeholder="abc@example.com" name="email" [(ngModel)]="userInfo.email">
                 </div>
                 <div class="form_item">
                     <div class="label">Пароль</div>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userInfo.password">
                 </div>
-                <div class="submit">Войти</div>
+                <div class="submit" (click)="onSubmit()">Войти</div>
             </form>
             <div class="change">Нет аккаута?<div (click)="login = false">Можно создать!</div>
             </div>
@@ -24,17 +24,17 @@
             <form>
                 <div class="form_item">
                     <div class="label">E-mail</div>
-                    <input type="text" placeholder="abc@example.com">
+                    <input type="text" placeholder="abc@example.com" name="email" [(ngModel)]="userInfo.email">
                 </div>
                 <div class="form_item">
                     <div class="label">Пароль</div>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userInfo.password">
                 </div>
                 <div class="form_item">
                     <div class="label">Подтвердить пароль</div>
-                    <input type="password">
+                    <input type="password" name="password2" [(ngModel)]="userInfo.password2">
                 </div>
-                <div class="submit">Создать</div>
+                <div class="submit" (click)="onSubmit()">Создать</div>
             </form>
             <div class="change">Уже есть аккаунт?<div (click)="login = true">Можно войти!</div>
             </div>

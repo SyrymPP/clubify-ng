@@ -10,6 +10,14 @@ export class EditorPanelComponent implements OnInit {
   public clubs = []
   constructor(private clubService: ClubService) { }
 
+  clubInfo = {
+    name: '',
+    image: '',
+    category: '',
+    description: '',
+    text: ''
+  }
+
   ngOnInit(): void {
     this.clubService.getClub()
       .subscribe(data => {
@@ -17,4 +25,8 @@ export class EditorPanelComponent implements OnInit {
       })
   }
 
+  onSubmit(): void {
+    console.log(this.clubInfo)
+    this.clubService.create(this.clubInfo)
+  }
 }

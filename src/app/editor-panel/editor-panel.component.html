@@ -3,25 +3,25 @@
     <form>
         <div class="field">
             <div class="field_label">Club name</div>
-            <input type="text">
+            <input type="text" name="name" [(ngModel)]="clubInfo.name">
         </div>
         <div class="field">
             <div class="field_label">Image</div>
-            <input type="file">
+            <input type="file" name="image" [(ngModel)]="clubInfo.image">
         </div>
         <div class="field">
             <div class="field_label">Category</div>
-            <input type="text">
+            <input type="text" name="category" [(ngModel)]="clubInfo.category">
         </div>
         <div class="field">
             <div class="field_label">Desc</div>
-            <input type="text">
+            <input type="text" name="description" [(ngModel)]="clubInfo.description">
         </div>
         <div class="field">
             <div class="field_label">Text</div>
-            <textarea cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="10" name="text" [(ngModel)]="clubInfo.text"></textarea>
         </div>
-        <button>Add club</button>
+        <button (click)="onSubmit()">Add club</button>
     </form>
     <hr />
     <div class="title">Editor's List</div>
