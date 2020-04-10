@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ClubService } from '../club.service';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
-import { userInfo } from 'os';
 
 @Component({
   selector: 'app-club-detail',
