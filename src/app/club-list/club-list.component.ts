@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClubService } from '../club.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-club-list',
@@ -9,15 +10,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ClubListComponent implements OnInit {
   public clubList = []
-  constructor(private clubService: ClubService, private route: ActivatedRoute, private router: Router) { }
+  public category
+
+  constructor(
+              private clubService: ClubService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private categorySerivice: CategoryService
+              ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {
-      this.clubService.getClub()
-        .subscribe(data => {
-          this.clubList = data.filter(o => o.category == decodeURI(param.id))
-        })
+      this.categorySerivice.getCategories().subscribe(
+        data => {
+          this.category = data.find(o => encodeURI(o.name) == param.id)
+          this.clubService.getClubsByCategory(this.category.id).subscribe(data => {
+            this.clubList = data
+          })
+        }
+      )
     })
   }
-
 }

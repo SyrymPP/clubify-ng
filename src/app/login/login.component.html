@@ -4,14 +4,14 @@
             <div class="title">Вход</div>
             <form>
                 <div class="form_item">
-                    <div class="label">E-mail</div>
-                    <input type="text" placeholder="abc@example.com" name="email" [(ngModel)]="userInfo.email">
+                    <div class="label">Username</div>
+                    <input type="text" placeholder="username" name="username" [(ngModel)]="userInfo.username">
                 </div>
                 <div class="form_item">
                     <div class="label">Пароль</div>
                     <input type="password" name="password" [(ngModel)]="userInfo.password">
                 </div>
-                <div class="submit" (click)="onSubmit()">Войти</div>
+                <div class="submit" (click)="onLogin()">Войти</div>
             </form>
             <div class="change">Нет аккаута?<div (click)="login = false">Можно создать!</div>
             </div>
@@ -23,8 +23,8 @@
             <div class="title">Регистрация</div>
             <form>
                 <div class="form_item">
-                    <div class="label">E-mail</div>
-                    <input type="text" placeholder="abc@example.com" name="email" [(ngModel)]="userInfo.email">
+                    <div class="label">Username</div>
+                    <input type="text" placeholder="abc@example.com" name="username" [(ngModel)]="userInfo.username">
                 </div>
                 <div class="form_item">
                     <div class="label">Пароль</div>
@@ -34,7 +34,7 @@
                     <div class="label">Подтвердить пароль</div>
                     <input type="password" name="password2" [(ngModel)]="userInfo.password2">
                 </div>
-                <div class="submit" (click)="onSubmit()">Создать</div>
+                <div class="submit" (click)="onRegister()">Создать</div>
             </form>
             <div class="change">Уже есть аккаунт?<div (click)="login = true">Можно войти!</div>
             </div>

@@ -6,22 +6,27 @@
             <input type="text" name="name" [(ngModel)]="clubInfo.name">
         </div>
         <div class="field">
-            <div class="field_label">Image</div>
-            <input type="file" name="image" [(ngModel)]="clubInfo.image">
+            <div class="field_label">Image URL</div>
+            <input type="text" name="img" [(ngModel)]="clubInfo.img">
         </div>
         <div class="field">
             <div class="field_label">Category</div>
-            <input type="text" name="category" [(ngModel)]="clubInfo.category">
+            <input type="text" name="category2" [(ngModel)]="clubInfo.category2">
         </div>
         <div class="field">
             <div class="field_label">Desc</div>
-            <input type="text" name="description" [(ngModel)]="clubInfo.description">
+            <input type="text" name="desc" [(ngModel)]="clubInfo.desc">
         </div>
         <div class="field">
             <div class="field_label">Text</div>
             <textarea cols="30" rows="10" name="text" [(ngModel)]="clubInfo.text"></textarea>
         </div>
-        <button (click)="onSubmit()">Add club</button>
+        <div *ngIf="selectedMode">
+            <button (click)="onEdit()">Edit club</button>
+        </div>
+        <div *ngIf="!selectedMode">
+            <button (click)="onSubmit()">Add club</button>
+        </div>
     </form>
     <hr />
     <div class="title">Editor's List</div>
@@ -29,8 +34,8 @@
         <div *ngFor="let c of clubs">
             <div class="editor_list__item">
                 {{ c.name }}
-                <button><i class="material-icons">delete</i></button>
-                <button><i class="material-icons">create</i></button>
+                <button><i class="material-icons" (click)="onDelete(c.id)">delete</i></button>
+                <button><i class="material-icons" (click)="onChangeMode(c.id)">create</i></button>
             </div>
         </div>
     </div>

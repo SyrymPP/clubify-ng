@@ -7,7 +7,7 @@ import { User } from '../assets/interfaces/user'
   providedIn: 'root'
 })
 export class UserService {
-  private _url = ''
+  private _url = 'http://localhost:8000/api/'
   httpHeaders = {
     headers: new HttpHeaders({"Content-Type": "application/json"})
   }
@@ -15,14 +15,14 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   login(user): Observable<User> {
-    return this.http.post<User>(this._url + 'login', user, this.httpHeaders)
+    return this.http.post<User>(this._url + 'login/', user, this.httpHeaders)
   }
 
   register(user): Observable<User> {
-    return this.http.post<User>(this._url + 'register', user, this.httpHeaders)
+    return this.http.post<User>(this._url + 'register/', user, this.httpHeaders)
   }
 
   enroll(info): Observable<User> {
-    return this.http.post<User>(this._url + 'enroll', info, this.httpHeaders)
+    return this.http.post<User>(this._url + 'enroll/', info, this.httpHeaders)
   }
 }

@@ -12,7 +12,7 @@ export class CategoryListComponent implements OnInit {
   constructor(private categoryService: CategoryService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategory()
+    this.categoryService.getCategories()
       .subscribe(data => {
         this.categories = data.map(item => {
           return {

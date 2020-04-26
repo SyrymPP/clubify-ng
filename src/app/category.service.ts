@@ -7,10 +7,10 @@ import { ICategory } from 'src/assets/interfaces/cateogry';
   providedIn: 'root'
 })
 export class CategoryService {
-  private _url: string = "assets/data/category.json"
+  private _url: string = "http://localhost:8000/api/categories/"
   constructor(private http: HttpClient) { }
 
-  getCategory(): Observable<ICategory[]> {
+  getCategories(): Observable<ICategory[]> {
     return this.http.get<ICategory[]>(this._url)
   }
 }

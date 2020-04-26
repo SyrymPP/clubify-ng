@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private categorySerivce: CategoryService) { }
 
   ngOnInit(): void {
-    this.categorySerivce.getCategory()
+    this.categorySerivce.getCategories()
       .subscribe(data => {
         this.path = encodeURI(data[0].name)
         this.router.navigate(['home', this.path])

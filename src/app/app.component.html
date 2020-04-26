@@ -1,6 +1,11 @@
 <div class="header">
   <div class="logo">clubify</div>
   <div></div>
-  <div class="login" routerLink="/login">log in</div>
+  <div *ngIf='!in'>
+    <div class="login" routerLink="/login">log in</div>
+  </div>
+  <div *ngIf='in'>
+    <div class="login" (click)="onLogout()">log out</div>
+  </div>
 </div>
 <router-outlet></router-outlet>
